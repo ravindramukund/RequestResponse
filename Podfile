@@ -6,6 +6,6 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'RequestResponse' do
-pod 'Socket.IO-Client-Swift', '~> 6.0'
+pod 'Socket.IO-Client-Swift', '~> 5.0’
 end
 

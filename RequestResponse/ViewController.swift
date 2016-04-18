@@ -16,7 +16,6 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     @IBOutlet weak var groupCountLbl:UILabel!
     @IBOutlet weak var tableView: UITableView!
  
-    
     var results = [Result]()
     
     override func viewDidLoad() {
@@ -93,14 +92,14 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         let name = resultsDict["name"] as! String;
         print("\n\n\(name)")
             
-        let image = resultsDict["image"] as! String;
+        let imageStr = resultsDict["image"] as! String;
         
         //converting string to URL and displaying on console
-        let imageString = resultsDict["image"] as! String!
+        let imageString = resultsDict["image"] as! String
         let imageUrl = NSURL(string: "\(imageString)")!
         print("url = \(imageUrl)\n\n")
 
-        let ResultsObj = Result(imageUrl:image,name: name)
+        let ResultsObj = Result(imageUrl:imageStr,name: name)
         self.results.append(ResultsObj);
         self.tableView.reloadData()
         

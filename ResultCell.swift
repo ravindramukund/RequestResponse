@@ -28,8 +28,10 @@ class ResultCell: UITableViewCell {
 //        let imageUrl = NSURL(string: "\(imageString)")!
 //        print("url = \(imageUrl)\n\n")
         
-        
-    let url = NSURL(string:"\(Result.imageUrl)")
+    //converting a the imageString to url and storing it in a temp image holder to download and shows 
+    
+    
+    let url = NSURL(string:"\(result.imageUrl)")
     let data = NSData(contentsOfURL: url!)
     spotImage.image = UIImage(data: data!)
         
